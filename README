@@ -1,0 +1,76 @@
+orlykor12
+203595541
+orly koren
+helped- yoni mantzur
+=============================
+=      File description     =
+=============================
+
+Aggressive.java - The aggressive spaceship. This ship pursues other ships and tries to fire at them.
+Basher.java - The Basher spaceship. This ship will always accelerate, and will constantly turn towards the 
+closest ship.
+Drunkard.java - The Drunkard spaceship. This spaceship doesn't have a certain method so it does random moves.
+HumanControlled.java -The Human spaceship. This spaceship is controlled by the user. 
+Runner.java - The Runner spaceship. This spaceship attempts to run away from the fight.
+Special.java - The Special spaceship. This spaceship does special acts that differs from the other ships.
+SpaceShip.java- the super class. its a base class for the other spaceship.
+SpaceShipFactory.java - Creates all the spaceship objects according to the command line arguments.
+
+
+=============================
+=          Design           =
+=============================
+
+I designed the supper class to be a base class which all the other sub classes(the different ships) can
+inherit from this class- is a relation(all the sub ships are a spaceship). I choose do use that implemention 
+because I had classes in the sup class that all the other ships used them. 
+I didnt use abstract class for example, because I didnt have any methods i didnt want to implement in the sup 
+class, and also, the human class i did, had differents methods the other classes didnt have. for example, at 
+the begging I wanted to make an abstract method of the acceleration method, but then I realized that the 
+human class doesnt use it (has I wanted to). for that I used the base class implemention, I didn't want to 
+"sign a contract" between the sup class and the sub classes(that is also the reason why I didnt use 
+interface).
+
+
+the pros of that I used the inherittion method in my sup class, are that all the other sub classes of mine 
+can inherit but also, are not obligated to use all the methods it supplies.
+cons- its very dangerous, because a single change in the super class casues changes in the sub classed, and 
+maybe sometimes those changes are not good for the sub classes implemention.
+
+
+also, I wrote all the methods in the sup class, because all the other sub classes need to do the excat thing.
+ if we look at it as the real world, so for example there is the mother ship that gives birth to little some 
+spaceships so they have the same options as the mothership has, but, like family, every child is differ a bit 
+from the others, but they all have the same family name, mother and cetera. I looked at this program the same
+way, every ship is the same as the other, with a little change in each.
+ if i consider the code repetition, I can surely say its a pro for the way I chose.
+(as meanwhile with interface in this case it doesn't). - for example in the doAction method I needed to add
+1 energy to each spaceship so, I did it in the super class, and override it in the other class. so it goes 
+ for the different methods I did.
+
+
+
+=============================
+=  Implementation details   =
+=============================
+
+I chose to do every spaceship in a different class because every one of them add different behavior. but them
+all had the basic methods they inherited from the super class. 
+
+
+=============================
+=    Answers to questions   =
+=============================
+
+The drunkard ship - This ship does random moves. I generated random numbers between -1 to 1, so Sometimes it
+will turn right and sometimes left or none.
+Moreover, the pilot drank so much, he doesn't notice when he pushes the teleport button.
+But when the pilot see a ship near him, he gets sober and try to shot at her direction and turn on 
+his shield. I implement it so it will go as random as it can, but meanwhile it can operate and try to
+fight.
+
+specialShip- first, I changed the ship image for the image of the pokemon "pikachu" so it will be more fun to
+play the game. I also changed its shield to be the "pocadur" image.
+the special ship basically floating around at space, but when a ship gets close to it, it feels threatened 
+and try to escape and fire back. that makes the ship angry and so it wants to revenge and tries to attack the 
+other ships around it. also, once in a while it likes to play and transport to another quiet place. 
